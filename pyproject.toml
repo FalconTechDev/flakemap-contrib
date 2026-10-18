@@ -1,0 +1,18 @@
+[project]
+name = "stabgate"
+version = "0.1.0"
+description = "Stability gate for pytest: rerun new/changed tests (and tests importing changed modules) N times, fail on mixed results."
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[project.scripts]
+stabgate = "stabgate.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["stabgate"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
